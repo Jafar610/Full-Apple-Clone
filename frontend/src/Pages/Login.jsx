@@ -4,6 +4,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
+
 function Login() {
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -11,11 +13,25 @@ function Login() {
     email: "",
   });
    const changeHandler = (e) => {
-    
+    setData({
+        ...data,
+        [e.target.name]:e.target.value
+    })
+   };
+
+   const submitHandler = async (e) =>{
+        e.preventDefault();
+    await axios.post('http://localhost:3002/login', data)
+    .then((res)=>{
+        console.log(res.data);
+        alert('Login Success')
+        navigate('/dashboard')
+    })
    }
+
   return (
     <>
-      <div className="bg-gray-100 w-full h-screen flex justify-center items-center font-poppins">
+      <div className="bg-white-800 w-full h-screen flex justify-center items-center font-poppins">
         <div>
           <div className="w-100">
             <div className="flex justify-center items-center">
@@ -33,7 +49,7 @@ function Login() {
           </div>
 
           <div className="mt-5 flex  border border-gray-300 rounded-2xl shadow-2xl w-100 px-8 py-5 bg-white">
-            <form>
+            <form onSubmit={submitHandler}>
               <div className="mt-5">
                 <label htmlFor="" className="text-start text-xl ">
                   Email
