@@ -1,8 +1,13 @@
 import React from 'react'
+import Iphone from '../Pages/Iphone'
+import Macbook from '../Pages/Macbook'
 
 function Home() {
   return (
-    <div>Home</div>
+    <>
+       <Iphone/>
+       <Macbook/>
+    </>
   )
 }
 
