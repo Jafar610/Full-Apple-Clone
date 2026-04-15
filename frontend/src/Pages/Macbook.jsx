@@ -19,7 +19,7 @@ function Macbook() {
                 <img src={Mac} alt="" className="w-170" />
               </div>
             </div>
-          </div><br /><br /><br /><br />
+          </div><br />
     </>
   )
 }
