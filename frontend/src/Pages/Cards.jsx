@@ -34,19 +34,19 @@ function Cards() {
             <div className="flex justify-center items-center">
               <img src={logo} alt="" className="w-15 mt-10" />
               <h1 className="text-center font-bold text-5xl pt-15 pb-3 text-black-800 font-popins">
-                Business
+                Card
               </h1>
             </div>
 
             <p className="text-center text-2xl text-black-700 pt3 pb-3">
-              Now With M5, M5 Pro and M5 Max.
+              Get up to 3% Daily Cash back <br />With every purchase.
             </p>
             <div className="flex justify-center items-center mt-3">
               <button className="mr-5  border px-8 py-2  rounded-full bg-blue-600 text-white border-blue-600">
                 Learn More
               </button>
               <button className=" border px-8 py-2  rounded-full  text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white">
-                Buy
+                Apply Now
               </button>
             </div>
             <img src={card} alt="" />

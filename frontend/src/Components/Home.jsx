@@ -5,6 +5,7 @@ import Ipad from '../Pages/Ipad'
 import Product1 from '../Pages/Product1'
 import Product2 from '../Pages/Product2'
 import Cards from '../Pages/Cards'
+import Entertainment from '../Pages/Entertainment'
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
        <Product1/>
        <Product2/>
        <Cards/>
+       <Entertainment/>
     </>
   )
 }
