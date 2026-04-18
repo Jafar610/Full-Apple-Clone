@@ -2,6 +2,7 @@ import React from "react";
 import logo from '../assets/img/apple-logo.svg'
 import search from '../assets/img/search-button.svg'
 import cart from '../assets/img/basket.svg'
+import {Link} from 'react-router-dom'
 function Header() {
   return (
     <>
@@ -11,35 +12,35 @@ function Header() {
         </div>
         <ul className="flex justify-center items-center">
           <li className="mr-10">
-            <a href="">Store</a>
+            <Link to='/store'>Store</Link>
           </li>
           <li className="mr-10">
-            <a href="">Mac</a>
+            <Link to='/mac'>Mac</Link>
           </li>
           <li className="mr-10">
-            <a href="">iPad</a>
+            <Link to='/ipad'>iPad</Link>
           </li>
           <li className="mr-10">
-            <a href="">iPhone</a>
+            <Link to='/iphone'>iPhone</Link>
           </li>
           <li className="mr-10">
-            <a href="">AirPod</a>
+            <Link to='/airpod'>AirPod</Link>
           </li>
           <li className="mr-10">
-            <a href="">Watch</a>
+            <Link to='/watch'>Watch</Link>
           </li>
           <li className="mr-10">
-            <a href="">TV & Home</a>
+            <Link to='/tv'>TV & Home</Link>
           </li>
           <li className="mr-10">
-            <a href="">
+            <Link to='/'>
               <img src={search} alt="search" className="w-5"/>
-            </a>
+            </Link>
           </li>
           <li className="mr-10">
-            <a href="">
+            <Link to='/cart'>
               <img src={cart} alt="cart" className="w-6" />
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

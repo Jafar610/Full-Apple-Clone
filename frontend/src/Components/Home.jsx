@@ -6,6 +6,7 @@ import Product1 from '../Pages/Product1'
 import Product2 from '../Pages/Product2'
 import Cards from '../Pages/Cards'
 import Entertainment from '../Pages/Entertainment'
+import Music from '../Pages/Music'
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
        <Product2/>
        <Cards/>
        <Entertainment/>
+       <Music/>
     </>
   )
 }
