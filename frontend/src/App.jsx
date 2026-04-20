@@ -5,6 +5,7 @@ import Dashboard from "./Components/Dashboard";
 import SharedLayout from "./Components/SharedLayout";
 import Home from "./Components/Home";
 import Store from "./Pages/Apple_Store/Store";
+import SharedSlide from "./Components/SharedSlide";
 function App() {
   return (
     <>
@@ -13,7 +14,7 @@ function App() {
           <Route path="/" element={<SharedLayout />}>
             <Route path="/login" element={<Login />} />
             <Route path="/" element = {<Home/>}/>
-            <Route path="/store" element={<Store />} />
+            <Route path="/store" element={<SharedSlide />} />
             <Route path="/dashboard" element={<Dashboard />} />
           </Route>
         </Routes>

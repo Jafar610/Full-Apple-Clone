@@ -8,7 +8,9 @@ function Header() {
     <>
       <nav className="flex justify-center items-center border border-gray-100 w-full bg-gray-100 py-2 shadow-xl font-poppins">
         <div className="mr-10">
+          <Link to='/'>
           <img src={logo} alt="apple logo" className="w-10 " />
+          </Link>
         </div>
         <ul className="flex justify-center items-center">
           <li className="mr-10">
