@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
 const bcrypt = require('bcrypt');
+const axios = require('axios');
 
 const app = express();
 app.use(cors());
@@ -50,6 +51,11 @@ app.post('/login', (req, res)=>{
 
     })
 
+})
+
+app.get('/music', async(req, res)=>{
+    const response = await axios.get("https://api.deezer.com/search?q=drake");
+  res.json(response.data);
 })
 
 app.get('/',(req, res)=>{
