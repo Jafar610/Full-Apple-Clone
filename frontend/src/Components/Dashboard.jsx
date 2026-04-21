@@ -1,9 +1,12 @@
 import React from 'react'
+import Topbar from '../Pages/Dashboard/Topbar'
+import Sidebar from '../Pages/Dashboard/Sidebar'
 
 function Dashboard() {
   return (
     <>
-        <h1 className='text-2xl text-gray-700 font-bold text-center mt-5'> THIS IS DASHBOARD PAGE</h1>
+        <Topbar/>
+        <Sidebar/>
     </>
   )
 }

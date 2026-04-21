@@ -68,6 +68,7 @@ function Store() {
                 <p className="text-xl font-bold mt-3 text-gray-500">$799</p>
               </div>
             </SwiperSlide>
+            
           </Swiper>
         </div>
 

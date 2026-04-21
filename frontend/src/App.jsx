@@ -6,6 +6,8 @@ import SharedLayout from "./Components/SharedLayout";
 import Home from "./Components/Home";
 import Store from "./Pages/Apple_Store/Store";
 import SharedSlide from "./Components/SharedSlide";
+import Mac from "./Pages/Mac";
+import Topbar from "./Pages/Dashboard/Topbar";
 function App() {
   return (
     <>
@@ -15,6 +17,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/" element = {<Home/>}/>
             <Route path="/store" element={<SharedSlide />} />
+            <Route path="/mac" element = {<Mac/>} />
             <Route path="/dashboard" element={<Dashboard />} />
           </Route>
         </Routes>
