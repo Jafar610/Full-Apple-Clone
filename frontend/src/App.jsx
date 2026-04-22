@@ -18,7 +18,10 @@ function App() {
             <Route path="/" element = {<Home/>}/>
             <Route path="/store" element={<SharedSlide />} />
             <Route path="/mac" element = {<Mac/>} />
-            <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
+
+          <Route path="/dashboard" element={<Dashboard />}>
+            
           </Route>
         </Routes>
       </Router>
