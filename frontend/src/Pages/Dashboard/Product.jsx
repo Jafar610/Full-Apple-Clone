@@ -1,18 +1,18 @@
 import React from 'react'
 
-function Categories() {
+function Product() {
   return (
     <div className="bg-gray-100 min-h-full">
 
       {/* Title */}
-      <div className="mb-6 ml-10">
+      <div className="mb-6">
         <h1 className="text-3xl font-bold text-gray-700">
           Add New Category
         </h1>
       </div>
 
       {/* Card */}
-      <div className="max-w-2xl bg-white p-6 rounded-lg shadow ml-10">
+      <div className="max-w-2xl bg-white p-6 rounded-lg shadow">
 
         <h2 className="text-2xl font-semibold text-gray-500 mb-4">
           Category Information
@@ -42,4 +42,4 @@ function Categories() {
   )
 }
 
-export default Categories
+export default Product

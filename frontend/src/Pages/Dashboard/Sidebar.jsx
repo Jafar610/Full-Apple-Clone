@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <>
-      <div className="bg-[#181818] w-64 h-screen shadow-sm font-poppins">
+      <div className="bg-[#181818] w-53 h-screen shadow-sm font-poppins">
         <div className="pl-5 pt-3">
           <Link to="/dashboard">
             <div className="flex justify-start items-center p-3 hover:bg-[#212121] hover:rounded-md">
@@ -22,14 +22,14 @@ function Sidebar() {
           </Link>
 
           <h1 className="mt-3 text-lg font-xl text-gray-500">Products</h1>
-          <Link>
+          <Link to = "categories">
             <div className="flex justify-start items-center p-3  hover:rounded-md hover:bg-[#212121] mb-2">
               <Grid2x2 size={25} className=" mr-3 text-white" />
               <h1 className="text-white text-xl font-md ">Categories</h1>
             </div>
           </Link>
 
-          <Link>
+          <Link to = "products">
             <div className="flex justify-start items-center p-3  hover:rounded-md hover:bg-[#212121]">
               <Grip size={25} className=" mr-3 text-white" />
               <h1 className="text-white text-xl font-md ">Products</h1>
@@ -38,14 +38,14 @@ function Sidebar() {
 
           <h1 className="mt-3 text-lg font-xl text-gray-500">Orders</h1>
 
-          <Link>
+          <Link to="orders">
             <div className="flex justify-start items-center p-3 hover:rounded-md hover:bg-[#212121] mb-2">
               <ShoppingCart size={25} className=" mr-3 text-white" />
               <h1 className="text-white text-xl font-md ">Orders</h1>
             </div>
           </Link>
 
-          <Link>
+          <Link to="customers">
             <div className="flex justify-start items-center p-3 hover:rounded-md hover:bg-[#212121]" >
               <User2Icon size={25} className=" mr-3 text-white" />
               <h1 className="text-white text-xl font-md ">Customers</h1>
@@ -54,14 +54,14 @@ function Sidebar() {
 
           <h1 className="mt-3 text-lg font-xl text-gray-500">Settings</h1>
 
-          <Link>
+          <Link to="profile">
             <div className="flex justify-start items-center p-3 hover:rounded-md hover:bg-[#212121]">
               <UserCircleIcon size={25} className=" mr-3 text-white" />
               <h1 className="text-white text-xl font-md ">Profile</h1>
             </div>
           </Link>
 
-          <Link>
+          <Link >
             <div className="flex justify-start items-center p-3 hover:rounded-md hover:bg-[#212121]">
               <LogOut size={25} className=" mr-3 text-white" />
               <h1 className="text-white text-xl font-md ">Log Out</h1>
