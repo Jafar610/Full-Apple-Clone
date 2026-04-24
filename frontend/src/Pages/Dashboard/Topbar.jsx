@@ -4,7 +4,7 @@ import profile from "../../assets/img/appleLogo.png";
 function Topbar() {
   return (
     <>
-      <div className="bg-sky-50  shadow-xl">
+      <div className="bg-sky-100  shadow-lg">
         <div className="flex justify-between items center">
           <div className="flex justify-start items-center bg-[#151718] pr-10 pl-3">
             <img src={profile} alt="" className="w-10 rounded-full mr-5 ml-3"/>
