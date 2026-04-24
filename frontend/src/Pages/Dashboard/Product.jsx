@@ -47,7 +47,7 @@ function Product() {
                 Category <span className="text-red-600">*</span>
               </label>
 
-              <select name="" id="" className="w-full border border-gray-300 rounded-md px-10 pr-30 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-gray-300">
+              <select name="" id="" className="w-full border border-gray-300 rounded-md px-10 pr-35 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-gray-300">
                 <option value="">Select Category</option>
               </select>
             
@@ -58,7 +58,7 @@ function Product() {
                 Brand <span className="text-red-600">*</span>
               </label>
 
-              <select name="" id="" className="w-full border border-gray-300 rounded-md px-14 pr-30 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-gray-300">
+              <select name="" id="" className="w-full border border-gray-300 rounded-md px-14 pr-40 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-gray-300">
                 <option value="">Select brand</option>
               </select>
             </div>

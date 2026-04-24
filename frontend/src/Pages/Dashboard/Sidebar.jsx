@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <>
-      <div className="bg-[#181818] w-53 h-screen shadow-sm font-poppins">
+      <div className="bg-[#181818] w-53 min-h-screen shadow-sm font-poppins">
         <div className="pl-5 pt-3">
           <Link to="/dashboard">
             <div className="flex justify-start items-center p-3 hover:bg-[#212121] hover:rounded-md">
