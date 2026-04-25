@@ -53,6 +53,41 @@ app.post('/login', (req, res)=>{
 
 })
 
+app.post('/addCategory', (req, res)=>{
+    const {category_name} = req.body;
+    const created_at = new Date();
+    connection.query('INSERT INTO categories (name, created_at) VALUES (?,?)', [category_name, created_at], (err, results)=>{
+        if(err) throw err;
+        res.json({message:'Category inserted successfully!!'});
+    })
+})
+
+app.get('/categories', (req, res)=>{
+    connection.query('SELECT * FROM categories', (err, results)=>{
+        if(err) throw err;
+        res.json(results);
+    })
+});
+
+app.post('/addProduct', (req, res)=>{
+    const {product_name, slug, price, discount_price, stock, image, short_description, description, category_id} = req.body;
+
+    const created_at = new Date();
+    connection.query('INSERT INTO products (name, slug, price, discount_price, stock, image, short_description, description, category_id, created_at) VALUES (?,?,?,?,?,?,?,?,?,?)', [product_name, slug, price, discount_price, stock, image, short_description, description, category_id, created_at], (err, results)=>{
+        if(err) throw err;
+        res.json({message:'Product inserted successfully!!'});
+    })
+
+});
+
+app.get('/products', (req, res)=>{
+    connection.query('SELECT * FROM products', (err, results)=>{
+        if(err) throw err;
+        res.json(results);
+    })
+});
+
+
 app.get('/music', async(req, res)=>{
     const response = await axios.get("https://api.deezer.com/search?q=drake");
   res.json(response.data);
