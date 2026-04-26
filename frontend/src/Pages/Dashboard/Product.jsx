@@ -30,6 +30,9 @@ function Product() {
     }
   };
 
+
+  
+
   const fetchCategories = async () => {
     try {
       const response = await axios.get('http://localhost:3002/categories'); // Adjust API endpoint as needed
