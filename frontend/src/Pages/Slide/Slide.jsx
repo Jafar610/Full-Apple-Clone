@@ -1,9 +1,16 @@
-import React from "react";
 import iphone from "../../assets/img/products/iphone 15Pro.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import {useState, useEffect} from 'react';
+import {useNavigation} from 'react-router-dom';
+
 function Slide() {
+  const navigate = useNavigation();
+  
+
+
+
   return (
     <>
       <div className="flex justify-center items-center w-full bg-white">
