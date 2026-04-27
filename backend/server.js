@@ -88,6 +88,14 @@ app.get('/products', (req, res)=>{
 });
 
 
+app.get('/slide', (req, res)=>{
+    connection.query('SELECT * FROM products', (err, results)=>{
+        if(err) throw err;
+        res.json(results);
+    })
+})
+
+
 app.get('/music', async(req, res)=>{
     const response = await axios.get("https://api.deezer.com/search?q=drake");
   res.json(response.data);
