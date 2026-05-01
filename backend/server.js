@@ -97,18 +97,26 @@ app.get('/slide', (req, res)=>{
 
 
 app.get('/watch', (req, res)=>{
-    connection.query('SELECT * FROM products WHERE category_id = 1', (err, results)=>{
+    connection.query('SELECT * FROM products WHERE category_id = 3', (err, results)=>{
         if(err) throw err;
         res.json(results);
     })
-
 });
 
 
 app.get('/music', async(req, res)=>{
     const response = await axios.get("https://api.deezer.com/search?q=drake");
   res.json(response.data);
-})
+});
+
+
+app.get('/mac-category', (req, res)=>{
+    connection.query('SELECT * FROM products WHERE category_id = 1', (err, results)=>{
+        if(err) throw err;
+        res.json(results);
+    })
+});
+
 
 app.get('/',(req, res)=>{
     res.json({message: 'hello amazing people'})
