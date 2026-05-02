@@ -42,13 +42,13 @@ function Store() {
                 <SwiperSlide key={product.id}>
                   <div className="bg-gray-50 border border-gray-100 shadow-sm rounded-xl mt-8 text-center p-5 mr-3 ml-3 h-95">
                     <img src={product.image} alt="" className="m-auto w-40 h-40" />
-                    <h1 className=" text-4xl text-center mt-5 mb-3 font-bold font-poppins">
+                    <h1 className=" text-3xl text-center mt-3 mb-3 font-bold font-poppins">
                       {product.name}
                     </h1>
-                    <p className="text-center text-md font-meduim">
+                    <p className="text-center text-md font-small font-mono">
                       {product.short_description}
                     </p>
-                    <p className="text-center text-xl font-bold mt-3 text-gray-500">
+                    <p className="text-center text-md font-bold mt-3 text-gray-500">
                       ${product.price}
                     </p>
                     

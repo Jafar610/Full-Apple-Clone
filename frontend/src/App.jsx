@@ -10,6 +10,7 @@ import Topbar from "./Pages/Dashboard/Topbar";
 import Categories from "./Pages/Dashboard/Categories";
 import Product from "./Pages/Dashboard/Product";
 import MacSharedLayout from "./Components/MacSharedLayout";
+import IpadSharedLayout from "./Components/IpadSharedLayout";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/store" element={<SharedSlide />} />
             <Route path="/mac" element={<MacSharedLayout />} />
+            <Route path="/ipad" element={<IpadSharedLayout />} />
           </Route>
 
           <Route path="/dashboard" element={<Dashboard />}>

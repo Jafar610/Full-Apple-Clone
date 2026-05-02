@@ -41,10 +41,10 @@ function MacCategory() {
                       alt=""
                       className="m-auto w-40 h-40"
                     />
-                    <h1 className=" text-2xl text-center mt-5 mb-3 font-bold font-poppins">
+                    <h1 className=" text-2xl text-center mt-3 mb-3 font-bold font-poppins">
                       {product.name}
                     </h1>
-                    <p className="text-center text-sm font-small">
+                    <p className="text-center text-sm font-small font-mono">
                       {product.short_description}
                     </p>
                     <p className="text-center text-md font-bold mt-2 text-gray-800">
