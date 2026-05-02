@@ -6,10 +6,10 @@ import SharedLayout from "./Components/SharedLayout";
 import Home from "./Components/Home";
 import Store from "./Pages/Apple_Store/Store";
 import SharedSlide from "./Components/SharedSlide";
-import Mac from "./Pages/Mac";
 import Topbar from "./Pages/Dashboard/Topbar";
 import Categories from "./Pages/Dashboard/Categories";
 import Product from "./Pages/Dashboard/Product";
+import MacSharedLayout from "./Components/MacSharedLayout";
 function App() {
   return (
     <>
@@ -19,7 +19,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Home />} />
             <Route path="/store" element={<SharedSlide />} />
-            <Route path="/mac" element={<Mac />} />
+            <Route path="/mac" element={<MacSharedLayout />} />
           </Route>
 
           <Route path="/dashboard" element={<Dashboard />}>

@@ -51,6 +51,24 @@ function Store() {
                     <p className="text-center text-xl font-bold mt-3 text-gray-500">
                       ${product.price}
                     </p>
+                    
+
+                    <div className="flex justify-center items-center mt-3 mb-5">
+                      <button
+                        onClick={() => navigate(`/products/${slide.id}`)}
+                        className="border rounded-xl px-8 py-2 mr-3 bg-blue-700 text-white text-md"
+                      >
+                        Buy
+                      </button>
+                      <button
+                        onClick={() => navigate(`/products/${slide.id}`)}
+                        className="border border-blue-700 rounded-xl px-6 py-2 text-md hover:bg-blue-700 hover:text-white text-black"
+                      >
+                        Learn More
+                      </button>
+                    </div>
+
+
                   </div>
                 </SwiperSlide>
               );
