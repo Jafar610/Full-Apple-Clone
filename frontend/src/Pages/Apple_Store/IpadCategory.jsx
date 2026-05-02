@@ -4,11 +4,12 @@ import "swiper";
 import { Autoplay } from "swiper/modules";
 import { useState } from "react";
 import axios from "axios";
+import Ipad from "../Ipad";
 
-function MacCategory() {
+function IpadCategory() {
   const [products, setProducts] = useState([]);
   useState(() => {
-    axios.get("http://localhost:3002/mac-category").then((res) => {
+    axios.get("http://localhost:3002/ipad-category").then((res) => {
       setProducts(res.data);
     });
   }, []);
@@ -17,14 +18,14 @@ function MacCategory() {
       <div className="text-center mt-10">
         <div>
           <h1 className="font-bold text-4xl font-poppins text-gray-600">
-            Popular Mac Products
+            Popular Ipad Products
           </h1>
         </div>
 
         <div className="flex justify-between items-center ml-10 mr-10">
           <Swiper
             modules={[Autoplay]}
-            slidesPerView={4}
+            slidesPerView={3}
             spaceBetween={10}
             loop={true}
             autoplay={{
@@ -76,4 +77,4 @@ function MacCategory() {
   );
 }
 
-export default MacCategory;
+export default IpadCategory;

@@ -31,7 +31,7 @@ function Slide() {
         >
           {slides.map(slide=>(
             <SwiperSlide key={slide.id}>
-            <div className="flex justify-around items-center bg-gray-100  w-full">
+            <div className="flex justify-around items-center bg-gray-50 border border-gray-100 shadow-xl  w-full">
               <div className="text-center">
                 <h1 className="text-6xl font-bold font-poppins pt-3 pb-3 ">
                   {slide.name}
