@@ -5,6 +5,7 @@ import MacCategory from '../Pages/Apple_Store/MacCategory'
 import IpadCategory from '../Pages/Apple_Store/IpadCategory'
 import IphoneCategory from '../Pages/Apple_Store/IphoneCategory'
 import AirPodCategory from '../Pages/Apple_Store/AirPodCategory'
+import WatchCategory from '../Pages/Apple_Store/WatchCategory'
 
 function SharedSlide() {
   return (
@@ -15,6 +16,7 @@ function SharedSlide() {
       <IpadCategory/>
       <IphoneCategory/>
       <AirPodCategory/>
+      <WatchCategory/>
     </>
   )
 }

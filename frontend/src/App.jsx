@@ -13,6 +13,7 @@ import MacSharedLayout from "./Components/MacSharedLayout";
 import IpadSharedLayout from "./Components/IpadSharedLayout";
 import IphoneSharedLayout from "./Components/IphoneSharedLayout";
 import AirPodSharedLayout from "./Components/AirPodSharedLayout";
+import WatchSharedLayout from "./Components/WatchSharedLayout";
 function App() {
   return (
     <>
@@ -26,8 +27,8 @@ function App() {
             <Route path="/ipad" element={<IpadSharedLayout />} />
             <Route path="/iphone" element={<IphoneSharedLayout />} />
             <Route path="/airpod" element={<AirPodSharedLayout />} />
-            {/* <Route path="/watch" element={<WatchSharedLayout />} />
-            <Route path="/tv" element={<TvSharedLayout />} /> */}
+            <Route path="/watch" element={<WatchSharedLayout />} />
+            {/* <Route path="/tv" element={<TvSharedLayout />} /> */}
           </Route>
 
           <Route path="/dashboard" element={<Dashboard />}>
