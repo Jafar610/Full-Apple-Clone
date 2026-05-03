@@ -117,6 +117,26 @@ app.get('/mac-category', (req, res)=>{
     })
 });
 
+app.get('/ipad-category', (req, res)=>{
+    connection.query('SELECT * FROM products WHERE category_id = 4', (err, results)=>{
+        if(err) throw err;
+        res.json(results);
+    })
+});
+
+app.get('/iphone-category', (req, res)=>{
+    connection.query('SELECT * FROM products WHERE category_id = 2', (err, results)=>{
+        if(err) throw err;
+        res.json(results);
+    })
+});
+
+app.get('/airpod-category', (req, res)=>{
+    connection.query('SELECT * FROM products WHERE category_id = 5', (err, results)=>{
+        if(err) throw err;
+        res.json(results);
+    });
+});
 
 app.get('/',(req, res)=>{
     res.json({message: 'hello amazing people'})
