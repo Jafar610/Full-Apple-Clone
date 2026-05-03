@@ -7,11 +7,12 @@ import { Autoplay } from "swiper/modules";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Ipad from "../Ipad";
+import Iphone from "../Iphone";
 
-function IpadProduct() {
+function IphoneProduct() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:3002/ipad-category").then((res) => {
+    axios.get("http://localhost:3002/iphone-category").then((res) => {
       setProducts(res.data);
     });
   }, []);
@@ -19,7 +20,7 @@ function IpadProduct() {
     <>
       <div className="text-center mt-10 bg-white ">
         <div className="ml-10 mr-10">
-          <h1 className="font-bold text-5xl font-poppins text-gray-800">Ipad</h1>
+          <h1 className="font-bold text-5xl font-poppins text-gray-800">Iphone</h1>
 
           <Swiper
             modules={[Autoplay]}
@@ -61,4 +62,4 @@ function IpadProduct() {
   );
 }
 
-export default IpadProduct;
+export default IphoneProduct;

@@ -11,6 +11,8 @@ import Categories from "./Pages/Dashboard/Categories";
 import Product from "./Pages/Dashboard/Product";
 import MacSharedLayout from "./Components/MacSharedLayout";
 import IpadSharedLayout from "./Components/IpadSharedLayout";
+import IphoneSharedLayout from "./Components/IphoneSharedLayout";
+import AirPodSharedLayout from "./Components/AirPodSharedLayout";
 function App() {
   return (
     <>
@@ -22,6 +24,10 @@ function App() {
             <Route path="/store" element={<SharedSlide />} />
             <Route path="/mac" element={<MacSharedLayout />} />
             <Route path="/ipad" element={<IpadSharedLayout />} />
+            <Route path="/iphone" element={<IphoneSharedLayout />} />
+            <Route path="/airpod" element={<AirPodSharedLayout />} />
+            {/* <Route path="/watch" element={<WatchSharedLayout />} />
+            <Route path="/tv" element={<TvSharedLayout />} /> */}
           </Route>
 
           <Route path="/dashboard" element={<Dashboard />}>
