@@ -96,7 +96,7 @@ app.get('/slide', (req, res)=>{
 })
 
 
-app.get('/watch', (req, res)=>{
+app.get('/watch-category', (req, res)=>{
     connection.query('SELECT * FROM products WHERE category_id = 3', (err, results)=>{
         if(err) throw err;
         res.json(results);
@@ -137,6 +137,14 @@ app.get('/airpod-category', (req, res)=>{
         res.json(results);
     });
 });
+
+app.get('/tv-home-category', (req, res)=>{
+    connection.query('SELECT * FROM products WHERE category_id = 6', (err, results)=>{
+        if(err) throw err;
+        res.json(results);
+    });
+});
+
 
 app.get('/',(req, res)=>{
     res.json({message: 'hello amazing people'})
