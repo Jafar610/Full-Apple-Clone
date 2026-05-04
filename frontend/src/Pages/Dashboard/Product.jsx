@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import ReactPaginate from 'react-paginate';
 
 function Product() {
   const [products, setProducts] = useState([]);
@@ -15,6 +16,9 @@ function Product() {
   const [image, setImage] = useState('');
   const [shortDesc, setShortDesc] = useState('');
   const [desc, setDesc] = useState('');
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 10;
+
 
   useEffect(() => {
     fetchProducts();
@@ -115,6 +119,7 @@ function Product() {
               </tr>
             ))}
           </tbody>
+          
         </table>
       </div>
 
