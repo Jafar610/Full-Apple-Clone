@@ -3,23 +3,23 @@ import img from "../../assets/img/products/airpod.jpg";
 function Cart() {
   return (
     <>
-      <div className="mt-5 bg-gray-100">
-        <div className="flex justify-between items-center">
-          <div>
-            <div id="img" className="flex justify-between items-center">
-              <img src={img} alt="AirPods" className="w-40" />
+      <div className="mt-5 bg-white shadow-lg m-10 p-5 rounded-lg">
+        <div className="flex justify-between items-center mb-5 border-b border-gray-300 pb-5">
+          <div className="flex justify-center items-center">
+            <div id="img" className="flex justify-between items-center mr-5">
+              <img src={img} alt="AirPods" className="w-32 rounded-md" />
             </div>
             <div id="phone">
-              <h2>AirPods Pro</h2>
-              <p>Active Noise Cancellation</p>
+              <h2 className="font-bold text-lg">AirPods Pro</h2>
+              <p className="text-sm text-gray-600">Active Noise Cancellation</p>
             </div>
           </div>
 
-          <div>
-            <div id="increment" className="flex justify-center items-center">
-              <button>-</button>
-              <span>1</span>
-              <button>+</button>
+          <div className="flex justify-center items-center ">
+            <div id="increment" className="flex justify-center items-center mr-15 border border-gray-400 rounded-md px-2 bg-gray-50">
+              <button className="border-r border-gray-400 pr-5 pb-1 font-bold text-xl">-</button>
+              <span className="px-3">1</span>
+              <button className="border-l border-gray-400 pl-5 pb-1 font-bold text-xl">+</button>
             </div>
             <div id="price">
               <p>$1,099.00</p>
@@ -27,11 +27,14 @@ function Cart() {
           </div>
 
         </div>
-        <hr />
-        <div id="total">
-          <p>Total: $1,099.00</p>
+        <div id="total" className="flex justify-between items-center">
+          <p>Total:</p>
+          <p>$1,099.00</p>
         </div>
-        <button className="bg-blue-500 text-white py-2 px-4 rounded">Checkout</button>
+        <div className="flex justify-end items-center">
+           <button className="bg-blue-500 text-white py-2 px-4 rounded">Checkout</button>
+        </div>
+       
       </div>
     </>
   );
