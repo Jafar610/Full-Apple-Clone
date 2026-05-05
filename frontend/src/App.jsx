@@ -30,6 +30,7 @@ function App() {
             <Route path="/airpod" element={<AirPodSharedLayout />} />
             <Route path="/watch" element={<WatchSharedLayout />} />
             <Route path="/tv" element={<TvHomeSharedLayout />} />
+            <Route path="/cart" element={<Cart />} />
           </Route>
 
           <Route path="/dashboard" element={<Dashboard />}>
