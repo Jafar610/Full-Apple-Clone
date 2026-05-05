@@ -15,6 +15,7 @@ import IphoneSharedLayout from "./Components/IphoneSharedLayout";
 import AirPodSharedLayout from "./Components/AirPodSharedLayout";
 import WatchSharedLayout from "./Components/WatchSharedLayout";
 import TvHomeSharedLayout from "./Components/TvHomeSharedLayout";
+import Cart from "./Pages/Cart/Cart";
 function App() {
   return (
     <>
