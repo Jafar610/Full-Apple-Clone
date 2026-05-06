@@ -28,9 +28,21 @@ function Cart() {
 
         </div>
         <div id="total" className="flex justify-between items-center">
-          <p>Total:</p>
+          <p className="font-medium text-lg">Total:</p>
           <p>$1,099.00</p>
         </div>
+
+        <div id="total" className="flex justify-between items-center mt-2">
+          <p className="font-medium text-lg">Shipping:</p>
+          <p>$1,099.00</p>
+        </div>
+
+        <div id="total" className="flex justify-between items-center mt-2 mb-3">
+          <p className="font-medium text-lg">Tax:</p>
+          <p>$1,099.00</p>
+        </div>
+
+
         <div className="flex justify-end items-center">
            <button className="bg-blue-500 text-white py-2 px-4 rounded">Checkout</button>
         </div>
