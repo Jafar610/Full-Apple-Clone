@@ -15,6 +15,7 @@ import IphoneSharedLayout from "./Components/IphoneSharedLayout";
 import AirPodSharedLayout from "./Components/AirPodSharedLayout";
 import WatchSharedLayout from "./Components/WatchSharedLayout";
 import TvHomeSharedLayout from "./Components/TvHomeSharedLayout";
+import SingleProduct from "./Pages/SingleProduct/SingleProduct";
 import Cart from "./Pages/Cart/Cart";
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/watch" element={<WatchSharedLayout />} />
             <Route path="/tv" element={<TvHomeSharedLayout />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/product/:id" element={<SingleProduct />} />
           </Route>
 
           <Route path="/dashboard" element={<Dashboard />}>
