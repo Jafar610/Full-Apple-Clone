@@ -146,6 +146,14 @@ app.get('/tv-home-category', (req, res)=>{
 });
 
 
+app.get('/products/:id', (req, res)=>{
+    const productId = req.params.id;
+    connection.query('SELECT * FROM products WHERE id = ?', [productId], (err, results)=>{
+        if(err) throw err;
+        res.json(results[0]);
+    });
+});
+
 app.get('/',(req, res)=>{
     res.json({message: 'hello amazing people'})
 })
