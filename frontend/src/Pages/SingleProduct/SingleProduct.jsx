@@ -8,7 +8,7 @@ function SingleProduct() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3002/products/${id}`);
+        const response = await axios.get(`http://localhost:3002/product/${id}`);
         setProduct(response.data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -24,23 +24,19 @@ function SingleProduct() {
  
   return (
     <div className="">
-      <div className="mt-5 bg-white shadow-md m-10 p-5 rounded-lg">
-        <div className="flex justify-center items-center">
-          <h1 className="text-2xl font-bold">{product.name}</h1>
-        </div>
-        <div className="flex justify-center items-center">
+      <div className="mt-5 bg-white shadow-md m-10 p-5 rounded-lg flex justify-center items-center">
+       
+        <div className="flex justify-center items-center gap-10 ">
             <div className="w-1/2 p-5">
+                <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
                 <p>{product.description}</p>
-        
-
-                <p className="text-xl font-bold mt-5">${product.price.toFixed(2)}</p>
-
+                <p className="text-xl font-bold mt-5">${product.price}</p>
                 <button className="bg-gray-900 text-white px-5 py-2 rounded-lg mt-5">Add to Cart</button>
             </div>
 
 
             <div className="w-1/2 p-5">
-                <img src={product.image} alt={product.name} className="w-full h-auto" />
+                <img src={product.image} alt={product.name} className="w-80" />
             </div>
         </div>
       </div>

@@ -3,12 +3,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import {useState, useEffect} from 'react';
-
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 function Slide() {
   const [slides, setSlides] = useState([]);
+  const navigate = useNavigate();
   useEffect(()=>{
-    fetch('http://localhost:3002/slide')
-    .then(res=> res.json())
+    axios.get('http://localhost:3002/slide')
+    .then(res=> res.data)
     .then(data=>{
       setSlides(data);
     })
@@ -46,10 +48,10 @@ function Slide() {
                   ${slide.discount_price}
                 </p>
                 <div className="flex justify-center items-center mt-5">
-                  <button onClick={()=>navigate(`/products/${slide.id}`)} className="border rounded-xl px-10 py-2 mr-3 bg-blue-700 text-white text-md">
+                  <button onClick={()=>navigate(`/product/${slide.id}`)} className="border rounded-xl px-10 py-2 mr-3 bg-blue-700 text-white text-md">
                     Buy
                   </button>
-                  <button onClick={()=>navigate(`/products/${slide.id}`)} className="border border-blue-700 rounded-xl px-8 py-2 text-md hover:bg-blue-700 hover:text-white text-black">
+                  <button onClick={()=>navigate(`/product/${slide.id}`)} className="border border-blue-700 rounded-xl px-8 py-2 text-md hover:bg-blue-700 hover:text-white text-black">
                     Learn More
                   </button>
                 </div>

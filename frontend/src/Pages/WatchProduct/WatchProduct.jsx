@@ -36,7 +36,7 @@ function WatchProduct() {
                 return (
                   <SwiperSlide key={product.id}>
                     <Link
-                      to={`/products/${product.id}`}
+                      to={`/product/${product.id}`}
                       className="flex justify-center items-center mt-5 mb-5 shadow-sm rounded-xl p-5 mr-3 ml-3 h-50 w-60 hover:shadow-lg transition duration-300 ease-in-out"
                     >
                       <div className="flex justify-center items-center flex-col">

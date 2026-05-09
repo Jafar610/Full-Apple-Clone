@@ -5,8 +5,9 @@ import { Autoplay } from "swiper/modules";
 import { useState } from "react";
 import axios from "axios";
 import Ipad from "../Ipad";
-
+import {useNavigate} from "react-router-dom";
 function WatchCategory() {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   useState(() => {
     axios.get("http://localhost:3002/watch-category").then((res) => {
@@ -54,13 +55,13 @@ function WatchCategory() {
 
                     <div className="flex justify-center items-center mt-2 mb-5">
                       <button
-                        onClick={() => navigate(`/products/${slide.id}`)}
+                        onClick={() => navigate(`/product/${product.id}`)}
                         className="border rounded-xl px-5 py-2 mr-3 bg-blue-700 text-white text-md"
                       >
                         Buy
                       </button>
                       <button
-                        onClick={() => navigate(`/products/${slide.id}`)}
+                        onClick={() => navigate(`/product/${product.id}`)}
                         className="border border-blue-700 rounded-xl px-5 py-2 text-md hover:bg-blue-700 hover:text-white text-black"
                       >
                         Learn More

@@ -8,8 +8,9 @@ import ipad from "../../assets/img/products/store-pro3.png";
 import miniMac from "../../assets/img/products/store-pro4.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import {useNavigate} from "react-router-dom";
 function Store() {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios.get("http://localhost:3002/products").then((res) => {
@@ -55,13 +56,13 @@ function Store() {
 
                     <div className="flex justify-center items-center mt-3 mb-5">
                       <button
-                        onClick={() => navigate(`/products/${slide.id}`)}
+                        onClick={() => navigate(`/product/${product.id}`)}
                         className="border rounded-xl px-8 py-2 mr-3 bg-blue-700 text-white text-md"
                       >
                         Buy
                       </button>
                       <button
-                        onClick={() => navigate(`/products/${slide.id}`)}
+                        onClick={() => navigate(`/products/${product.id}`)}
                         className="border border-blue-700 rounded-xl px-6 py-2 text-md hover:bg-blue-700 hover:text-white text-black"
                       >
                         Learn More
