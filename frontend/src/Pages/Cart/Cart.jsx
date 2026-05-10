@@ -1,6 +1,27 @@
 import React from "react";
 import img from "../../assets/img/products/airpod.jpg";
+import {useState, useEffect} from 'react'
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../redux/slices/userSlice";
+import axios from "axios";
+
 function Cart() {
+  const [quantity, setQuantity] = useState(1);
+  const [price] = useState(1099.00);
+
+  const incrementQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  
+
   return (
     <>
       <div className="mt-5 bg-white shadow-lg m-10 p-5 rounded-lg">
