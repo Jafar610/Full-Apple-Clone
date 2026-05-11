@@ -20,6 +20,13 @@ function Cart() {
     }
   };
 
+  axios.get('http://localhost:5000/cart')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error('Error fetching cart data:', error);
+  });
   
 
   return (
