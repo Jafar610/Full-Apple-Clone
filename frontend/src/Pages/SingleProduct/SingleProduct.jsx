@@ -21,7 +21,18 @@ function SingleProduct() {
   if (!product) {
     return <div>Loading...</div>;
   }
- 
+  const addToCart = () => {
+   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingItemIndex = cart.findIndex((item) => item.id === product.id);
+    if (existingItemIndex !== -1) {
+      cart[existingItemIndex].quantity += 1;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Product added to cart!");
+  };
+
   return (
     <div className="">
       <div className="mt-5 bg-white shadow-md m-10 p-5 rounded-lg flex justify-center items-center">
@@ -31,7 +42,7 @@ function SingleProduct() {
                 <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
                 <p>{product.description}</p>
                 <p className="text-xl font-bold mt-5">${product.price}</p>
-                <button className="bg-gray-900 text-white px-5 py-2 rounded-lg mt-5">Add to Cart</button>
+                <button onClick={addToCart} className="bg-gray-900 text-white px-5 py-2 rounded-lg mt-5">Add to Cart</button>
             </div>
 
 
