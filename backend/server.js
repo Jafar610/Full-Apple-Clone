@@ -156,6 +156,7 @@ app.get('/product/:id', (req, res)=>{
 
 
 
+
 app.get('/',(req, res)=>{
     res.json({message: 'hello amazing people'})
 })
