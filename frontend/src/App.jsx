@@ -18,6 +18,7 @@ import TvHomeSharedLayout from "./Components/TvHomeSharedLayout";
 import SingleProduct from "./Pages/SingleProduct/SingleProduct";
 import Cart from "./Pages/Cart/Cart";
 import Success from "./Pages/Success";
+import Orders from "./Pages/Orders";
 function App() {
   return (
     <>
@@ -36,6 +37,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/product/:id" element={<SingleProduct />} />
             <Route path="/success" element={<Success />} />
+            <Route path="/orders" element={<Orders />} />
           </Route>
 
           <Route path="/dashboard" element={<Dashboard />}>
