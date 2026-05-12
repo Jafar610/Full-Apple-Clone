@@ -182,6 +182,29 @@ app.post("/create-checkout-session", async (req, res) => {
   res.json({ url: session.url });
 });
 
+app.post('/orders', (req, res) => {
+  const { total, items } = req.body;
+  const created_at = new Date();
+
+  connection.query(
+    'INSERT INTO orders (total, items, created_at) VALUES (?,?,?)',
+    [total, JSON.stringify(items), created_at],
+    (err, results) => {
+      if (err) throw err;
+      res.json({ message: 'Order saved successfully!!' });
+    }
+  );
+});
+
+
+app.get('/orders', (req, res)=>{
+    connection.query('SELECT * FROM orders', (err, results)=>{
+        if(err) throw err;
+        res.json(results);
+    })
+});
+
+
 
 app.get('/',(req, res)=>{
     res.json({message: 'hello amazing people'})
