@@ -17,6 +17,7 @@ import WatchSharedLayout from "./Components/WatchSharedLayout";
 import TvHomeSharedLayout from "./Components/TvHomeSharedLayout";
 import SingleProduct from "./Pages/SingleProduct/SingleProduct";
 import Cart from "./Pages/Cart/Cart";
+import Success from "./Pages/Success";
 function App() {
   return (
     <>
@@ -34,6 +35,7 @@ function App() {
             <Route path="/tv" element={<TvHomeSharedLayout />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/product/:id" element={<SingleProduct />} />
+            <Route path="/success" element={<Success />} />
           </Route>
 
           <Route path="/dashboard" element={<Dashboard />}>
