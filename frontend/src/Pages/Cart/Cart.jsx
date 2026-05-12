@@ -2,6 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(
+  "pk_test_51TW5UBPR0AOVrIhLrPwQi6V6vlvRqad7fd2LH6cYQednsvVrEVfpQb5J9FSCQ3f8rr7Lye9kczdFaFBFIPbJTlcq00HMCJqyQ8",
+);
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
@@ -32,6 +37,23 @@ function Cart() {
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     setSelectedItems([]);
+  };
+
+  const handleCheckout = async () => {
+    const response = await fetch(
+      "http://localhost:3002/create-checkout-session",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ cartItems }),
+      },
+    );
+
+    const data = await response.json();
+
+    window.location.href = data.url;
   };
 
   return (
@@ -120,6 +142,7 @@ function Cart() {
                 ? "bg-gray-300 cursor-not-allowed"
                 : "bg-blue-500 hover:bg-blue-600 text-white"
             }`}
+            onClick={handleCheckout}
           >
             Checkout
           </button>
