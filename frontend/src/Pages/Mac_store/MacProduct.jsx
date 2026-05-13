@@ -1,5 +1,4 @@
 import React from "react";
-import mac from "../../assets/img/products/mac.png";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper";
