@@ -1,5 +1,5 @@
 import React from 'react'
-import ipad from '../assets/img/products/Ipad.jpg'
+import ipad from '../assets/img/products/ipad.jpg'
 function Ipad() {
   return (
     <>

@@ -1,5 +1,5 @@
 import React from "react";
-import iphone from "../assets/img/products/iphone.png"
+import iphone from "../assets/img/products/iPhone.png"
 function Iphone() {
   return (
     <>
