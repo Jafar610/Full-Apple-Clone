@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Ipad from "../Ipad";
 
-
 function IpadProduct() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
