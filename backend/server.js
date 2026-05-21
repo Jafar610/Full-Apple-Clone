@@ -159,7 +159,6 @@ app.get('/product/:id', (req, res)=>{
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 app.post("/create-checkout-session", async (req, res) => {
   const { cartItems } = req.body;
-
   const line_items = cartItems.map(item => ({
     price_data: {
       currency: "usd",
